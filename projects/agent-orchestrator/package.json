@@ -1,0 +1,9 @@
+{
+  "name": "agent-orchestrator",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "python app.py",
+    "build": "echo 'Static demo'"
+  }
+}
