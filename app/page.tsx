@@ -26,15 +26,7 @@ const skills = [
   { icon: Cpu, label: 'Frameworks', desc: 'PyTorch, scikit-learn, pandas, NumPy, Next.js' },
 ]
 
-const awards = [
-  {
-    title: 'CIO Award Winner',
-    organization: 'Marsh McLennan',
-    year: '2025',
-    description: 'Recognized by Chief Information Officer Paul Beswick for designing Curie\'s schema, context engineering, and dynamic context improvements enabling robust, scalable conversational AI performance.',
-    bonus: '$3,000 award',
-  },
-]
+
 
 const experiences = [
   {
@@ -43,7 +35,7 @@ const experiences = [
     period: '2024 — Present',
     description: 'Core member of the initial Project Curie team, building MMC\'s first LLM-powered chatbot capable of answering complex questions across multiple databases. Led architecture decisions, established foundational systems, and drove the evolution from demo to production-ready FP&A assistant.',
     highlights: [
-      '🏆 CIO Award Winner (2025) — Recognized for designing Curie\'s schema, context engineering, and dynamic context improvements enabling robust, scalable conversational AI',
+      'Recognized by CIO for designing Curie\'s schema, context engineering, and dynamic context improvements enabling robust, scalable conversational AI',
       'Built Curie\'s core orchestrator and API backend, establishing agent graph architecture, memory layer, system prompts, authentication, and local development setup for team collaboration',
       'Led integration of MCP (Model Context Protocol) server — first use within an MMC LLM chatbot — isolating tools, resources, and prompts to improve scalability and security',
       'Implemented JWT authentication and token management for secure, role-aware access control',
@@ -301,37 +293,6 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Awards */}
-      <section className="py-20 px-6 border-t border-border">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-bold tracking-tight mb-12">Awards</h2>
-          <div className="space-y-6">
-            {awards.map((award, i) => (
-              <div
-                key={i}
-                className="p-6 rounded-xl bg-card border border-border hover:border-accent/50 transition-all"
-              >
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl">🏆</span>
-                    <div>
-                      <h3 className="text-lg font-semibold">{award.title}</h3>
-                      <p className="text-muted">{award.organization}</p>
-                    </div>
-                  </div>
-                  <span className="text-sm text-accent font-medium mt-2 md:mt-0">{award.year}</span>
-                </div>
-                <p className="text-muted mb-2">{award.description}</p>
-                <span className="inline-flex items-center gap-1 text-sm text-accent/80">
-                  <Sparkles className="w-4 h-4" />
-                  {award.bonus}
-                </span>
               </div>
             ))}
           </div>
