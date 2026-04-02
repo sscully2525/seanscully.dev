@@ -18,10 +18,22 @@ const socialLinks = [
 ]
 
 const skills = [
-  { icon: Brain, label: 'LLMs & Agents', desc: 'LangGraph, LangChain, LangSmith' },
-  { icon: Code2, label: 'Languages', desc: 'Python, SQL, R, C++' },
-  { icon: Database, label: 'Systems', desc: 'Redis, MongoDB, FastAPI, Docker' },
-  { icon: Terminal, label: 'ML & AI', desc: 'NLP, Vision Transformers, Predictive Analytics' },
+  { icon: Brain, label: 'LLMs & Agents', desc: 'LangGraph, LangChain, LangSmith, OpenAI, Prompt Engineering' },
+  { icon: Code2, label: 'Languages', desc: 'Python, SQL, R, C++, JavaScript/TypeScript' },
+  { icon: Database, label: 'Systems & Data', desc: 'Redis, MongoDB, PostgreSQL, FastAPI, REST APIs' },
+  { icon: Terminal, label: 'ML & AI', desc: 'NLP, Vision Transformers, RAG, Predictive Analytics' },
+  { icon: GitBranch, label: 'DevOps & Tools', desc: 'Docker, Git, CI/CD, Linux, AWS/GCP basics' },
+  { icon: Cpu, label: 'Frameworks', desc: 'PyTorch, scikit-learn, pandas, NumPy, Next.js' },
+]
+
+const awards = [
+  {
+    title: 'CIO Award Winner',
+    organization: 'Marsh McLennan',
+    year: '2025',
+    description: 'Recognized by Chief Information Officer Paul Beswick for designing Curie\'s schema, context engineering, and dynamic context improvements enabling robust, scalable conversational AI performance.',
+    bonus: '$3,000 award',
+  },
 ]
 
 const experiences = [
@@ -31,6 +43,7 @@ const experiences = [
     period: '2024 — Present',
     description: 'Building enterprise LLM systems. Led development of the first production AI chatbot serving 25+ stakeholders. Architected agent-based systems with LangGraph, reducing response latency through Redis optimization and context engineering.',
     highlights: [
+      '🏆 CIO Award Winner (2025) — Recognized for designing Curie\'s schema, context engineering, and dynamic context improvements enabling robust, scalable conversational AI',
       'Reduced context size by ~50% while preserving accuracy',
       'Improved response relevance by 25-35% through iterative evaluation',
       'Migrated memory architecture from Postgres to Redis',
@@ -56,8 +69,8 @@ const projects = [
     description: 'LangGraph-powered system coordinating specialized AI agents. Features intelligent routing, parallel execution, and context-aware synthesis.',
     tech: ['LangGraph', 'OpenAI', 'FastAPI', 'Redis'],
     icon: Bot,
-    github: '#',
-    demo: '#',
+    github: 'https://github.com/sscully2525/seanscully.dev/tree/main/projects/agent-orchestrator',
+    demo: 'https://github.com/sscully2525/seanscully.dev/tree/main/projects/agent-orchestrator',
     highlights: [
       'Router agent intelligently delegates to specialized agents',
       'Parallel execution with state management',
@@ -70,8 +83,8 @@ const projects = [
     description: 'Production RAG system with query rewriting, hybrid search (dense + sparse), reciprocal rank fusion, and cross-encoder reranking.',
     tech: ['LangChain', 'OpenAI', 'BM25', 'Vector DB'],
     icon: Search,
-    github: '#',
-    demo: '#',
+    github: 'https://github.com/sscully2525/seanscully.dev/tree/main/projects/rag-pipeline',
+    demo: 'https://github.com/sscully2525/seanscully.dev/tree/main/projects/rag-pipeline',
     highlights: [
       'Query expansion and clarification',
       'Hybrid retrieval: embeddings + BM25',
@@ -84,8 +97,8 @@ const projects = [
     description: 'Real-time market analysis using LLMs for sentiment, technical indicators, and trading signals. Pattern detection and risk assessment.',
     tech: ['Python', 'yfinance', 'pandas-ta', 'OpenAI'],
     icon: TrendingUp,
-    github: '#',
-    demo: '#',
+    github: 'https://github.com/sscully2525/seanscully.dev/tree/main/projects/market-analyzer',
+    demo: 'https://github.com/sscully2525/seanscully.dev/tree/main/projects/market-analyzer',
     highlights: [
       'Technical indicator calculation (RSI, MACD, Bollinger)',
       'Pattern detection (Golden Cross, divergences)',
@@ -98,8 +111,8 @@ const projects = [
     description: 'Intelligent code review combining AST analysis with LLM reasoning. Detects security issues, performance problems, and style violations.',
     tech: ['Python', 'AST', 'LangChain', 'OpenAI'],
     icon: Shield,
-    github: '#',
-    demo: '#',
+    github: 'https://github.com/sscully2525/seanscully.dev/tree/main/projects/code-reviewer',
+    demo: 'https://github.com/sscully2525/seanscully.dev/tree/main/projects/code-reviewer',
     highlights: [
       'Static analysis for security vulnerabilities',
       'Performance pattern detection',
@@ -111,32 +124,46 @@ const projects = [
 
 const learnings = [
   {
-    title: 'LangGraph: Building Stateful Agent Applications',
-    source: 'LangChain Academy',
+    title: 'LangChain Academy: LangGraph',
+    source: 'LangChain',
     type: 'Course',
-    description: 'Deep dive into graph-based agent orchestration, memory management, and human-in-the-loop patterns.',
-    link: 'https://academy.langchain.com',
+    description: 'Official course on building stateful, multi-actor applications with LLMs using graph-based orchestration.',
+    link: 'https://academy.langchain.com/courses/intro-to-langgraph',
   },
   {
-    title: 'Building Production-Ready LLM Systems',
-    source: 'Chip Huyen',
-    type: 'Blog Series',
-    description: 'Engineering patterns for reliability, evaluation, and iteration in production AI systems.',
-    link: 'https://huyenchip.com',
+    title: 'Practical Deep Learning for Coders',
+    source: 'Fast.ai',
+    type: 'Course',
+    description: 'Hands-on deep learning course covering CNNs, transformers, and modern neural network architectures.',
+    link: 'https://course.fast.ai',
   },
   {
-    title: 'The Anatomy of an AI Agent',
+    title: 'Building LLM Applications for Production',
+    source: 'DeepLearning.AI',
+    type: 'Course',
+    description: 'Andrew Ng\'s course on productionizing LLMs, covering RAG, fine-tuning, and deployment patterns.',
+    link: 'https://deeplearning.ai/short-courses/building-llm-apps/',
+  },
+  {
+    title: 'LLM Powered Autonomous Agents',
+    source: 'Lil\'Log',
+    type: 'Blog',
+    description: 'Comprehensive survey of autonomous agent architectures, memory systems, and tool use patterns.',
+    link: 'https://lilianweng.github.io/posts/2023-06-23-llm-agent/',
+  },
+  {
+    title: 'Anthropic\'s Contextual Retrieval',
     source: 'Anthropic',
     type: 'Research',
-    description: 'Understanding tool use, planning, and multi-step reasoning in modern LLM agents.',
-    link: 'https://anthropic.com',
+    description: 'Advanced RAG techniques combining embeddings with contextual chunk headers for improved retrieval.',
+    link: 'https://anthropic.com/news/contextual-retrieval',
   },
   {
-    title: 'Vector Databases: From Embeddings to Search',
-    source: 'Pinecone Learning Center',
-    type: 'Course',
-    description: 'Semantic search, RAG architectures, and scaling vector operations.',
-    link: 'https://pinecone.io',
+    title: 'The Illustrated Transformer',
+    source: 'Jay Alammar',
+    type: 'Blog',
+    description: 'Visual guide to understanding transformer architecture and attention mechanisms.',
+    link: 'https://jalammar.github.io/illustrated-transformer/',
   },
 ]
 
@@ -227,8 +254,8 @@ export default function Home() {
       {/* Skills */}
       <section id="about" className="py-20 px-6 border-t border-border">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-bold tracking-tight mb-12">Expertise</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-3xl font-bold tracking-tight mb-12">Skills</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skill, i) => (
               <div
                 key={skill.label}
@@ -270,6 +297,37 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Awards */}
+      <section className="py-20 px-6 border-t border-border">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="text-3xl font-bold tracking-tight mb-12">Awards</h2>
+          <div className="space-y-6">
+            {awards.map((award, i) => (
+              <div
+                key={i}
+                className="p-6 rounded-xl bg-card border border-border hover:border-accent/50 transition-all"
+              >
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">🏆</span>
+                    <div>
+                      <h3 className="text-lg font-semibold">{award.title}</h3>
+                      <p className="text-muted">{award.organization}</p>
+                    </div>
+                  </div>
+                  <span className="text-sm text-accent font-medium mt-2 md:mt-0">{award.year}</span>
+                </div>
+                <p className="text-muted mb-2">{award.description}</p>
+                <span className="inline-flex items-center gap-1 text-sm text-accent/80">
+                  <Sparkles className="w-4 h-4" />
+                  {award.bonus}
+                </span>
               </div>
             ))}
           </div>
